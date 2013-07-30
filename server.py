@@ -10,6 +10,7 @@ logger = logging.getLogger("server");
 class MainHandler(tornado.web.RequestHandler):
     def get(self, keyword=""):
         options = ImageOptions()
+        options.size_category = SizeCategory.MEDIUM;
         #options.image_type = ImageType.CLIPART
         #options.larger_than = LargerThan.MP_4
         #options.color = "green"
